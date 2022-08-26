@@ -45,7 +45,10 @@ document.getElementById('next').addEventListener('click', function(){
     else if(qnumber === 5){
         quizs.innerText = quizList[4].quiz5;
     }
+
     
+    optionCall(qnumber);
+
     if(qnumber <= 5){
         const qNum = document.getElementById('q-no');
         qNum.innerText = `${qnumber}`;
@@ -85,40 +88,77 @@ document.getElementById('start').addEventListener('click', function(){
     else{
         alert('hello');
     }
+
+    optionCall(qnumber);
 })
-const quizOption = [
-    opQuiz1[
-        {op1: 'anser1'},
-        {op2: 'anser1'},
-        {op3: 'anser1'},
-        {op4: 'anser1'}
-    ],
-    opQuiz2[
-        {op1: 'anser1'},
-        {op2: 'anser1'},
-        {op3: 'anser1'},
-        {op4: 'anser1'}
-    ],
-    opQuiz3[
-        {op1: 'anser1'},
-        {op2: 'anser1'},
-        {op3: 'anser1'},
-        {op4: 'anser1'}
-    ],
-    opQuiz4[
-        {op1: 'anser1'},
-        {op2: 'anser1'},
-        {op3: 'anser1'},
-        {op4: 'anser1'}
-    ],
-    opQuiz5[
-        {op1: 'anser1'},
-        {op2: 'anser1'},
-        {op3: 'anser1'},
-        {op4: 'anser1'}
-    ]
-];
-const firstOption = document.getElementById('option-1');
-const secondOption = document.getElementById('option-2');
-const thirdOption = document.getElementById('option-3');
-const fourthOption = document.getElementById('option-4');
+
+
+function optionCall(num){
+    const firstOption = document.getElementById('option1');
+    const secondOption = document.getElementById('option2');
+    const thirdOption = document.getElementById('option3');
+    const fourthOption = document.getElementById('option4');
+    if(num === 1){
+        firstOption.innerText = quizOption[0].op1;
+        secondOption.innerText = quizOption[0].op2;
+        thirdOption.innerText = quizOption[0].op3;
+        fourthOption.innerText = quizOption[0].op4;
+    }
+    else if(num === 2){
+        firstOption.innerText = quizOption[1].op1;
+        secondOption.innerText = quizOption[1].op2;
+        thirdOption.innerText = quizOption[1].op3;
+        fourthOption.innerText = quizOption[1].op4;
+    }
+    else if(num === 3){
+        firstOption.innerText = quizOption[2].op1;
+        secondOption.innerText = quizOption[2].op2;
+        thirdOption.innerText = quizOption[2].op3;
+        fourthOption.innerText = quizOption[2].op4;
+    }
+    else if(num === 4){
+        firstOption.innerText = quizOption[3].op1;
+        secondOption.innerText = quizOption[3].op2;
+        thirdOption.innerText = quizOption[3].op3;
+        fourthOption.innerText = quizOption[3].op4;
+    }
+    else if(num === 5){
+        firstOption.innerText = quizOption[4].op1;
+        secondOption.innerText = quizOption[4].op2;
+        thirdOption.innerText = quizOption[4].op3;
+        fourthOption.innerText = quizOption[4].op4;
+    }
+}
+
+const quizOption = [{
+    op1: 'quiz1-1',
+    op2: 'quiz1-2',
+    op3: 'quiz1-3',
+    op4: 'quiz1-4'
+},
+{
+    op1: 'quiz2-1',
+    op2: 'quiz2-2',
+    op3: 'quiz2-3',
+    op4: 'quiz2-4'
+},
+{
+    op1: 'quiz3-1',
+    op2: 'quiz3-2',
+    op3: 'quiz3-3',
+    op4: 'quiz3-4'
+},
+{
+    op1: 'quiz4-1',
+    op2: 'quiz4-2',
+    op3: 'quiz4-3',
+    op4: 'quiz4-4'
+},
+{
+    op1: 'quiz5-1',
+    op2: 'quiz5-2',
+    op3: 'quiz5-3',
+    op4: 'quiz5-4'
+}
+]
+
