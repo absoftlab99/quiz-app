@@ -1,5 +1,6 @@
 const progress = document.getElementById('progress');
 progress.style.width = 0;
+
 let width = 0;
 let qnumber = 0;
 document.getElementById('next').addEventListener('click', function(){
@@ -10,6 +11,8 @@ document.getElementById('next').addEventListener('click', function(){
     if(qnumber <= 5){
         const qNum = document.getElementById('q-no');
         qNum.innerText = `${qnumber}`;
+        const quistionNo = document.getElementById('quiz-no');
+        quistionNo.innerText = `${qnumber}`;
     }
     else{
         alert('No more question have')
