@@ -3,11 +3,11 @@ progress.style.width = 0;
 const quizs = document.getElementById('quizs');
 
 const quizList = [
-    {quiz1: 'What is Java Srcipt?'},
-    {quiz2: 'What is Java Srcipt ES-6?'},
-    {quiz3: 'What is Stand fro ES-6?'},
-    {quiz4: 'What is Stand for JS?'},
-    {quiz5: 'What is The Mohter Company of java-script?'}
+    {quiz1: '1. What is Java Srcipt?'},
+    {quiz2: '2. What is Java Srcipt ES-6?'},
+    {quiz3: '3. What is Stand fro ES-6?'},
+    {quiz4: '4. What is Stand for JS?'},
+    {quiz5: '5. What is The Mohter Company of java-script?'}
 ];
 
 let width = 0;
@@ -52,8 +52,6 @@ document.getElementById('next').addEventListener('click', function(){
     if(qnumber <= 5){
         const qNum = document.getElementById('q-no');
         qNum.innerText = `${qnumber}`;
-        const quistionNo = document.getElementById('quiz-no');
-        quistionNo.innerText = `${qnumber}`;
     }
     else{
         alert('No more question have')
@@ -78,8 +76,6 @@ document.getElementById('start').addEventListener('click', function(){
 
     const qNum = document.getElementById('q-no');
     qNum.innerText = `${qnumber}`;
-    const quistionNo = document.getElementById('quiz-no');
-    quistionNo.innerText = `${qnumber}`;
 
     if(qnumber === 1){
         quizs.innerText = quizList[0].quiz1;
@@ -99,31 +95,31 @@ function optionCall(num){
     const thirdOption = document.getElementById('option3');
     const fourthOption = document.getElementById('option4');
     if(num === 1){
-        firstOption.innerText = quizOption[0].op1;
+        firstOption.innerText = quizOption[0].ok;
         secondOption.innerText = quizOption[0].op2;
         thirdOption.innerText = quizOption[0].op3;
         fourthOption.innerText = quizOption[0].op4;
     }
     else if(num === 2){
         firstOption.innerText = quizOption[1].op1;
-        secondOption.innerText = quizOption[1].op2;
+        secondOption.innerText = quizOption[1].ok;
         thirdOption.innerText = quizOption[1].op3;
         fourthOption.innerText = quizOption[1].op4;
     }
     else if(num === 3){
         firstOption.innerText = quizOption[2].op1;
         secondOption.innerText = quizOption[2].op2;
-        thirdOption.innerText = quizOption[2].op3;
+        thirdOption.innerText = quizOption[2].ok;
         fourthOption.innerText = quizOption[2].op4;
     }
     else if(num === 4){
         firstOption.innerText = quizOption[3].op1;
         secondOption.innerText = quizOption[3].op2;
         thirdOption.innerText = quizOption[3].op3;
-        fourthOption.innerText = quizOption[3].op4;
+        fourthOption.innerText = quizOption[3].ok;
     }
     else if(num === 5){
-        firstOption.innerText = quizOption[4].op1;
+        firstOption.innerText = quizOption[4].ok;
         secondOption.innerText = quizOption[4].op2;
         thirdOption.innerText = quizOption[4].op3;
         fourthOption.innerText = quizOption[4].op4;
@@ -131,31 +127,31 @@ function optionCall(num){
 }
 
 const quizOption = [{
-    op1: 'quiz1-1',
+    ok: 'quiz1-1',
     op2: 'quiz1-2',
     op3: 'quiz1-3',
     op4: 'quiz1-4'
 },
 {
     op1: 'quiz2-1',
-    op2: 'quiz2-2',
+    ok: 'quiz2-2',
     op3: 'quiz2-3',
     op4: 'quiz2-4'
 },
 {
     op1: 'quiz3-1',
     op2: 'quiz3-2',
-    op3: 'quiz3-3',
+    ok: 'quiz3-3',
     op4: 'quiz3-4'
 },
 {
     op1: 'quiz4-1',
     op2: 'quiz4-2',
     op3: 'quiz4-3',
-    op4: 'quiz4-4'
+    ok: 'quiz4-4'
 },
 {
-    op1: 'quiz5-1',
+    ok: 'quiz5-1',
     op2: 'quiz5-2',
     op3: 'quiz5-3',
     op4: 'quiz5-4'
