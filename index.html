@@ -6,10 +6,34 @@
     <title>My Quiz App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/7abbe36ff3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    
+    <main class="container mt-3 border border-info p-0">
+        <section class="bg-skyblue rounded-0 d-flex flex-column justify-content-center items-align-center">
+            <h3 class="text-dark text-center"><span id="quiz-no">01</span> Qize Text Here</h3>
+            <div class="quiz d-flex flex-column w-50 my-0 mx-auto">
+                <button class="btn btn-light rounded mt-2 text-start"><span id="qicon1"><i class="fa-solid fa-circle-check text-success"></i> </span>Option 1</button>
+                <button class="btn btn-light rounded mt-2 text-start"><span id="qicon2"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 2</button>
+                <button class="btn btn-light rounded mt-2 text-start"><span id="qicon3"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 3</button>
+                <button class="btn btn-light rounded mt-2 text-start"><span id="qicon4"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 4</button>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="row p-3">
+                <div class="col-6 d-flex justify-content-center items-align-center">
+                    <div class="progress w-50 mt-2">
+                        <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" id="progress"><p><span id="q-no">1</span>/5</p></div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-center items-align-center">
+                    <button class="btn btn-secondary px-5" id="next">CONTINEU</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
 </body>
