@@ -13,25 +13,30 @@
     
     <main class="container mt-3 border border-info p-0">
         <section class="bg-skyblue rounded-0 d-flex flex-column justify-content-center items-align-center">
-            <h3 class="text-dark text-center"><span id="quiz-no">1</span>. Qize Text Here</h3>
-            <div class="quiz d-flex flex-column w-50 my-0 mx-auto">
-                <button id="option-1" class="btn btn-light rounded mt-2 text-start"><span id="qicon1"><i class="fa-solid fa-circle-check text-success"></i> </span>Option 1</button>
-                <button id="option-2" class="btn btn-light rounded mt-2 text-start"><span id="qicon2"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 2</button>
-                <button id="option-3" class="btn btn-light rounded mt-2 text-start"><span id="qicon3"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 3</button>
-                <button id="option-4" class="btn btn-light rounded mt-2 text-start"><span id="qicon4"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 4</button>
+            <div class="d-none" id="quiz-body">
+                <h3 class="text-dark text-center" id="quizs"><span id="quiz-no">1</span>. Qize Text Here</h3>
+                <div class="quiz d-flex flex-column w-50 my-0 mx-auto">
+                    <button id="option-1" class="btn btn-light rounded mt-2 text-start"><span id="qicon1"><i class="fa-solid fa-circle-check text-success"></i> </span>Option 1</button>
+                    <button id="option-2" class="btn btn-light rounded mt-2 text-start"><span id="qicon2"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 2</button>
+                    <button id="option-3" class="btn btn-light rounded mt-2 text-start"><span id="qicon3"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 3</button>
+                    <button id="option-4" class="btn btn-light rounded mt-2 text-start"><span id="qicon4"><i class="fa-solid fa-circle-xmark text-danger"></i> </span>Option 4</button>
+                </div>
+            </div>
+            <div class="m-auto" id="start">
+                <button class="btn btn-success px-5">Start Quiz</button>
             </div>
         </section>
         <section class="bg-light">
             <div class="row p-3">
                 <div class="col-6 d-flex justify-content-center items-align-center">
-                    <div class="progress w-50 mt-2">
+                    <div class="progress w-75 mt-2">
                         <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" id="progress">
                             <p class="pt-3 text-dark"><span id="q-no"></span>/5</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 d-flex justify-content-center items-align-center">
-                    <button class="btn btn-secondary px-5" id="next">CONTINEU</button>
+                    <button class="btn btn-secondary px-5 disabled" id="next">CONTINEU</button>
                 </div>
             </div>
         </section>
